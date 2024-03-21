@@ -1,0 +1,104 @@
+*{
+    font-family: Helvetica;
+    background-image:linear-gradient(rgba(27, 57, 56, 0.5), rgba(7, 31, 25, 0.5)), url(bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+ .navbar{
+    width: 95%;
+    margin: auto;
+    padding: 5px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .navbar h3 {
+    font-family: Playfair Display;
+    font-size:20px ;
+    text-decoration:none;
+    color: white;
+    text-align: center; 
+     
+ }
+
+ .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+ }
+
+ .navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+ }
+
+ .navbar ul li::after{
+   content: '';
+   height: 3px;
+   width: 0;
+   background: rgb(162, 210, 162);
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   transition: 0.5s;
+ }
+
+ .navbar ul li:hover::after{
+   width: 100%;
+ }
+
+ .content {
+    color: white;
+    width: 100%;
+    position: absolute;
+    text-align: left;
+   
+ }
+
+ .content h1{
+    font-family: Playfair Display;
+    font-weight: bold;
+    font-size: 60px;
+    background: transparent;
+    margin-left: 5%;
+
+ }
+
+ .content p{
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    transform: translateY(-120%);
+    background: transparent;
+    margin-left: 5%;
+    
+ }
+
+ .b button{
+    font-size: 12px;
+    width: 150px; ;
+    padding: 12px 0 ;
+    text-align:center ;
+    margin: 20px 30px ;
+    border-radius: 20px;
+    font-weight: bold;
+    background:  transparent;
+    border: 2px solid #A7C7E7;
+    transform: translateY(-120%);
+    margin-left: 5%;
+ }
+
+ .b button a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+ }
+

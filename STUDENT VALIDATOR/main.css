@@ -1,0 +1,75 @@
+* {
+   font-family: monospace;
+   background-color: rgb(1, 1, 53);
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+}
+
+.navbar {
+   width: 95%;
+   margin: auto;
+   padding: 5px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navbar h3 {
+   font-family: monospace;
+   font-size: 20px;
+   text-decoration: none;
+   color: white;
+   text-align: center;
+}
+
+.navbar a {
+   text-decoration: none;
+}
+
+.content {
+   color: white;
+   width: 100%;
+   position: absolute;
+   text-align: left;
+}
+
+.content h1 {
+   font-family: Playfair Display;
+   font-weight: bold;
+   font-size: clamp(1rem, 6vw, 10rem);
+   background: transparent;
+   margin-left: 5%;
+}
+
+.content p {
+   text-align: left;
+   font-size: 17px;
+   font-weight: lighter;
+   color: white;
+   transform: translateY(-110%);
+   background: transparent;
+   margin-left: 5%;
+}
+
+.b button {
+   font-size: 16px;
+   width: 200px;
+   padding: 20px 0;
+   text-align: center;
+   margin: 20px 30px;
+   border-radius: 20px;
+   font-weight: bold;
+   background-color: #a7c7e7;
+   border: 2px solid #a7c7e7;
+   transform: translateY(-90%);
+   margin-left: 5%;
+}
+
+.b button a {
+   font-family: monospace;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: rgb(1, 1, 53);
+   background: transparent;
+}

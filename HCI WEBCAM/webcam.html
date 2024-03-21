@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Webcam</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body style="background-color: #f1fcfb; font-family: cursive">
+    <div class="header"><h1>W E B C A M</h1></div>
+    <br />
+    <br />
+    <center><video id="webcam" width="640" height="480"></video></center>
+    <center>
+      <br />
+      <br />
+      <button class="button" onclick="off_cam()" style="background-color: #435450; color: white;">Turn it OFF</button>
+    </center>
+    <center><h1 id="webcamoff"></h1></center>
+    <script>
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices
+          .getUserMedia({ video: true })
+          .then(function (stream) {
+            var webcam = document.getElementById("webcam");
+            webcam.srcObject = stream;
+            webcam.play();
+          });
+      }
+    </script>
+    <script>
+      function off_cam() {
+        window.alert("Are you sure you want to turn it off?");
+        var stream = document.getElementById("webcam").srcObject;
+        stream.getTracks().forEach(function (track) {
+          track.stop();
+        });
+        document.getElementById("webcam").srcObject = null;
+        var msg = "Your cam is already turn off!";
+        document.getElementById("webcamoff").innerHTML = msg;
+      }
+    </script>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="btn1">
+      <a href="homepage.html" class="button">Home</a>
+      <a href="qrcode.html" class="button">QR Code</a>
+      <a href="exit.html" class="button">EXIT</a>
+    </div>
+  </body>
+
+  <style>
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: #435450;
+      color: white;
+    }
+    .header h1 {
+      font-size: 40px;
+      font-family: Playfair Display;
+    }
+    .button {
+      background: transparent;
+      border: 2px solid #435450;
+      border-radius: 20px;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-family: Playfair Display;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</html>
