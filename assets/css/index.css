@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.125em;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(rgba(110, 87, 40, 0.75), rgba(52, 39, 30, 0.75));
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: Metropolis, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-text {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5em;
+  padding: 0.75em;
+  padding-top: 1em;
+}
+
+.nav-section nav {
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-section nav a {
+  color: white;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  padding: 5em 0.75em 1em 0.75em;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.hero-cta p:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.25em;
+  letter-spacing: 0.5em;
+}
+
+.hero-cta h1 {
+  font-size: 3em;
+  max-width: 10ch;
+}
+
+.hero-cta p:nth-child(3) {
+  opacity: 0.75;
+}
+
+.hero-cta a {
+  display: block;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.75em 1em;
+  background-color: #b5e8a4;
+  color: #111;
+}
+
+.hero-img {
+  display: block;
+  border-radius: 0.375em;
+  box-shadow: 0.5em 0.5em 0.5em #5d5647;
+  overflow: hidden;
+  filter: opacity(95%);
+}
+
+main {
+  padding: 5em 0.75em 1em 0.75em;
+}
+
+main > h1 {
+  margin-bottom: 0.5em;
+}
+
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+}
+
+.projects-section a {
+  display: block;
+  flex: 1 1 calc(25% - 0.75em);
+  min-width: 200px;
+  transition:
+    transform 150ms ease-in,
+    box-shadow 150ms ease-in;
+}
+
+.projects-section a:hover {
+  transform: scale(1.025);
+}
+
+.projects-section a:hover img {
+  box-shadow: 0.25em 0.25em 0.25em #5d564780;
+}
+
+.projects-section a img {
+  display: block;
+  border-radius: 0.375em;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .projects-section a {
+    flex: 1 1 calc(50% - 0.75em);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section a {
+    flex: 1 1 100%;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .hero-section {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .hero-cta h1 {
+    font-size: 4em;
+  }
+}
